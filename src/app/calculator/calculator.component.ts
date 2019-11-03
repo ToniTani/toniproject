@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CalculatorComponent implements OnInit {
-  buttons: string[] = [ '7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', 'C', '<', '0', '+', '=' ];
+  buttons: string[] = [ '7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', 'C', '<', '0', '+', '=', '.' ];
   result = '';
 
   private preValue = '';
@@ -21,8 +21,8 @@ export class CalculatorComponent implements OnInit {
     this.preValue = this.curValue;
     this.curValue = value;
     }
-    if ((this.preValue === '+' || this.preValue === '-' || this.preValue === '/' || this.preValue === '*' )
-      && (value === '+' || value === '-' || value === '/' ||  value === '*')) {
+    if ((this.preValue === '+' || this.preValue === '-' || this.preValue === '/' || this.preValue === '*' || this.preValue === '.' )
+      && (value === '+' || value === '-' || value === '/' ||  value === '*' || value === '.')) {
       alert('error'); } // adds error if inputted same operator twice
 
     if (value === 'C') {
