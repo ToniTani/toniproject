@@ -1,0 +1,40 @@
+
+.result{
+  border-radius: 16px;
+  margin-top: 1rem;
+  background: #F6F6F8;
+  color: #040404;
+  text-align: center;
+  padding: 0.7rem;
+}
+
+button {
+  background: #FB8122;
+  color: navy;
+  padding: 0.5rem 1.3rem;
+  text-decoration: none;
+  border: 1px #c2c3c4;
+  width: 40px;
+}
+input{
+
+  width: 250px;
+  height: 40px;
+
+}
+
+.calculator{
+
+  position: relative;
+  margin: 5% auto auto auto;
+  width: 400px;
+  text-align: center;
+  border-color: #1976d2;
+  border-radius: 20px;
+  box-shadow: #c2c3c4; inset: 2px 1px 10px -5px
+}
+mat-grid-list{
+  margin: 30px 50px;
+  border-radius: 10px; box-shadow: #eeb3e0; inset: 2px 1px 10px -5px;
+
+}
