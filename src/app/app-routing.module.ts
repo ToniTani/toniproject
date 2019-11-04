@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {Calculator} from '@angular-devkit/build-angular/src/angular-cli-files/utilities/bundle-calculator';
 import {CalculatorComponent} from './calculator/calculator.component';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 const routes: Routes = [
