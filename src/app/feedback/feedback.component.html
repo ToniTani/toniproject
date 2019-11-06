@@ -1,0 +1,17 @@
+<div class ="feedback" color='primary'>
+  <mat-card *ngFor="let item of feedbackItemsList">
+    <mat-card-header>
+    {{item.title}}
+    </mat-card-header>
+  <mat-card-content>
+    <mat-card-content>
+
+    <mat-slider (input)="item.feedbackValue($event.value)"></mat-slider>
+      {{item.feedback}}
+
+    </mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
