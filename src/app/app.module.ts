@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {MatButtonModule, MatCardModule, MatSliderModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatIconModule, MatSliderModule, MatToolbarModule} from '@angular/material';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { MatSidenavModule} from '@angular/material';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FlexModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatCardModule,
     MatToolbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
+    FlexModule
   ],
   providers: [],
   bootstrap: [AppComponent]
