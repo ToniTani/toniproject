@@ -1,5 +1,5 @@
-class FeedBackItem {
-  static counter: number = 1;
+export class FeedBackItem {
+  static counter = 1;
 
   id: number;
   title: string;
@@ -8,8 +8,16 @@ class FeedBackItem {
 
   constructor(msg: string) {
     this.title = msg;
-    this.feedback = 'not yet ';
-    this.id = FeedBackItem.counter;
+    this.feedback = 'Swipe to review!';
+    this.id = FeedBackItem.counter++;
   }
-
+  feedbackValue(value: number) {
+    if (value < 35) {
+      this.feedback = this.values[0];
+    } else if (value > 67) {
+      this.feedback = this.values[2];
+    } else {
+      this.feedback = this.values[1];
+    }
+  }
 }
