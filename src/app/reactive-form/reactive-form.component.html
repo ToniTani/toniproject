@@ -1,0 +1,31 @@
+<p>reactive-form works!</p>
+
+<div (ngSubmit)="onSubmit()" [formGroup]="profileForm">
+  <div>
+    <label>First Name</label>
+    <input type="text" formControlName="firstName">
+  </div>
+
+  <div>
+    <label>Last Name</label>
+    <input type="text" formControlName="lastName">
+  </div>
+
+  <div formGroupName="address">
+
+    <div>
+    <label>City</label>
+    <input type="text" formControlName="city">
+    </div>
+
+    <div>
+      <label>Zip Code</label>
+      <input type="text" formControlName="zipcode">
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- <button type="button" (click)="updateName()">Update<button/>  -->
