@@ -1,0 +1,22 @@
+<form class="example-form">
+
+  <mat-form-field class="example-full-width">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Etsi uutisista!" />
+  </mat-form-field>
+</form>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of cinemaData$ | async | newsFilter: searchTerm">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{item.PublishDate | shorten:10}}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{item.Title}}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>
+    {{item.HTMLLead}}
+    </p>
+    <img style="align-content: end" src="{{item.ImageURL}}" />
+  </mat-expansion-panel>
+</mat-accordion>
