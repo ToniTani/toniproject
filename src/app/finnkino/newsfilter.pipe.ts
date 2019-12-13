@@ -5,27 +5,28 @@ import {propertyNames} from '@angular/material/schematics/ng-update/data';
   name: 'newsFilter'
 })
 export class NewsfilterPipe implements PipeTransform {
-  transform(cinemaData$: any[], searchTerm: string) {
-
-    if (!cinemaData$ || !searchTerm) {
-      return cinemaData$;
+  transform(cinemaData$: any, searchTerm: string): any {
+    if (!cinemaData$ || !searchTerm)
+    {
+     return cinemaData$;
     }
-    return cinemaData$.filter(news => news.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
-
+    const resultArray = [];
+    for (const item of cinemaData$) {
+    if (item === searchTerm) {
+    resultArray.push(item);
+    }
   }
-}
-
-
-    /* if (value.length === 0 || filterString === '') {
-     return value; }
-
-   const resultArray = [];
-   for (const item of value) {
-     if (item[propName] === filterString) {
-      resultArray.push(item);
-     }
+    return resultArray;
    }
-   return resultArray;
-   }
-  }*/
+  }
 
+
+//   transform(cinemaData$: any[], searchTerm: string) {
+//
+//     if (!cinemaData$ || !searchTerm) {
+//       return cinemaData$;
+//     }
+//     return cinemaData$.filter(news => news.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
+//
+//   }
+// }

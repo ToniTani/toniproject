@@ -13,7 +13,7 @@ import {Album} from './album';
 export class AlbumsComponent implements OnInit {
 
   private cinemaData$: Observable<any>;
-  searchTerm: any;
+  searchTerm = '';
 
   constructor(private service: PokemonService, ) {}
 
