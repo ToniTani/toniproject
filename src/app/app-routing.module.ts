@@ -7,6 +7,7 @@ import {FeedbackComponent} from './feedback/feedback.component';
 import {TemplateFormComponent} from './template-form/template-form.component';
 import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
 import {AlbumsComponent} from './finnkino/albums.component';
+import {PhotosComponent} from './photos/photos.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'feedback', component: FeedbackComponent},
   {path: 'template-form', component: TemplateFormComponent},
   {path: 'reactive-form', component: ReactiveFormComponent},
-  {path: 'albums', component: AlbumsComponent}
+  {path: 'albums', component: AlbumsComponent},
+  {path: 'photos', component: PhotosComponent}
 ];
 
 

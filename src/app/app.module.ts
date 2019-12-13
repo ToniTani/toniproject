@@ -28,6 +28,7 @@ import { PhotosComponent } from './photos/photos.component';
 import { HttpClientModule } from '@angular/common/http';
 import {ShortenPipe} from './finnkino/shorten.pipe';
 import {NewsfilterPipe} from './finnkino/newsfilter.pipe';
+import {QuestionsService} from './service/questions.service';
 
 @NgModule({
     declarations: [
@@ -65,7 +66,7 @@ import {NewsfilterPipe} from './finnkino/newsfilter.pipe';
     MatExpansionModule,
     HttpClientModule
   ],
-  providers: [PokemonService,],
+  providers: [PokemonService, QuestionsService],
   bootstrap: [AppComponent, ]
 })
 export class AppModule { }

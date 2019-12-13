@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {Photo} from './photo';
+import {QuestionsService} from '../service/questions.service';
 
 @Component({
   selector: 'app-photos',
@@ -7,9 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotosComponent implements OnInit {
 
-  constructor() { }
+  photo: Photo = {
+    kissa: '',
+    koira: '',
+    apina: ''
+  }
+  photos: Photo[];
+  loaded = false;
+  showPhotoForm = false;
+  photoForm: any;
+
+  constructor(private questionsService: QuestionsService) { }
 
   ngOnInit() {
+    this.photos = this.questionsService.getPhotos();
+    this.loaded = true;
   }
+  onSubmit({value, valid}: {value: Photo, valid: boolean}) {
+    if (!valid) {
+      console.log('Form is not valid');
+    } else {
+      value.kissa = String(true);
+      value.koira = String(true);
+      value.apina = String(true);
 
+      this.questionsService.addPhoto(value);
+
+     // this.form.reset();
+    }
+  }
 }
