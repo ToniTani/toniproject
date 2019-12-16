@@ -29,6 +29,13 @@ import { HttpClientModule } from '@angular/common/http';
 import {ShortenPipe} from './finnkino/shorten.pipe';
 import {NewsfilterPipe} from './finnkino/newsfilter.pipe';
 import {QuestionsService} from './service/questions.service';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {environment} from '../environments/environment';
+import {AngularFireModule} from '@angular/fire';
+import {LoginComponent} from './login/login.component';
+import {AdminComponent} from './admin/admin.component';
+// import { AdminComponent } from './admin/admin.component'; [AngularFireModule.initializeApp(environment.firebase) ]
 
 @NgModule({
     declarations: [
@@ -42,6 +49,8 @@ import {QuestionsService} from './service/questions.service';
         PhotosComponent,
         ShortenPipe,
         NewsfilterPipe,
+        AdminComponent,
+      LoginComponent
 
     ],
   imports: [
@@ -64,7 +73,10 @@ import {QuestionsService} from './service/questions.service';
     MatInputModule,
     MatProgressSpinnerModule,
     MatExpansionModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule
+
   ],
   providers: [PokemonService, QuestionsService],
   bootstrap: [AppComponent, ]
