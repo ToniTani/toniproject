@@ -43,6 +43,8 @@ import { CurrencyCalculatorComponent } from './currency-calculator/currency-calc
 import {FirebaseAppConfig} from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { CurrencyService} from './service/currency.service';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 
 // import { AdminComponent } from './admin/admin.component'; [AngularFireModule.initializeApp(environment.firebase) ]
@@ -62,6 +64,8 @@ import { CurrencyService} from './service/currency.service';
         AdminComponent,
       LoginComponent,
       CurrencyCalculatorComponent,
+      HeaderComponent,
+      SidenavListComponent,
     ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

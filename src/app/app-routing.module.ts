@@ -15,7 +15,7 @@ import {CurrencyCalculatorComponent} from './currency-calculator/currency-calcul
 
 
 const routes: Routes = [
-  // { path: '' , redirectTo: '/calculator', pathMatch: 'full'},
+  { path: '' , redirectTo: '/calculator', pathMatch: 'full'},
   {path: 'calculator', component: CalculatorComponent},
   {path: 'feedback', component: FeedbackComponent},
   {path: 'template-form', component: TemplateFormComponent},
