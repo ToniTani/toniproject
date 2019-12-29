@@ -10,18 +10,18 @@ import {AuthenticationService} from '../service/authentication.service';
      providers: [AuthenticationService]
 })
 export class LoginComponent implements OnInit {
-  private loginForm: FormGroup;
+  loginForm: FormGroup;
 
   constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
-      email: new FormControl('', {
-        validators: [Validators.required, Validators.email ]})
-    });
-    //   password: new FormControl('', {
+      email: new FormControl (), // {
+       // validators: [Validators.required, Validators.email ]})
+   // });
+      password: new FormControl()
     //   validators: [Validators.required, Validators.password ]})
-    // });
+    });
   }
 
   onSubmit(f: NgForm) {

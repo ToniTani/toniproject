@@ -11,6 +11,7 @@ import {PhotosComponent} from './photos/photos.component';
 import {LoginComponent} from './login/login.component';
 import {AdminComponent} from './admin/admin.component';
 import {AuthGuard} from './service/auth.guard';
+import {CurrencyCalculatorComponent} from './currency-calculator/currency-calculator.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'albums', component: AlbumsComponent},
   {path: 'photos', component: PhotosComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'currency', component: CurrencyCalculatorComponent},
   {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]}
 ];
 
@@ -29,6 +31,5 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [AuthGuard]
 })
 export class AppRoutingModule { }

@@ -8,8 +8,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import {
   MatButtonModule,
   MatCardModule, MatExpansionModule,
-  MatIconModule,
-  MatProgressSpinnerModule,
+  MatIconModule, MatOptionModule,
+  MatProgressSpinnerModule, MatSelectModule,
   MatSliderModule,
   MatToolbarModule
 } from '@angular/material';
@@ -35,6 +35,16 @@ import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {LoginComponent} from './login/login.component';
 import {AdminComponent} from './admin/admin.component';
+import {firestore} from '@firebase/firestore/dist/test/util/api_helpers';
+import {FirebaseApp, FirebaseAuth, FirebaseDatabase} from '@angular/fire';
+import {AuthData} from './login/auth-data';
+import {AuthenticationService} from './service/authentication.service';
+import { CurrencyCalculatorComponent } from './currency-calculator/currency-calculator.component';
+import {FirebaseAppConfig} from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { CurrencyService} from './service/currency.service';
+
+
 // import { AdminComponent } from './admin/admin.component'; [AngularFireModule.initializeApp(environment.firebase) ]
 
 @NgModule({
@@ -50,10 +60,14 @@ import {AdminComponent} from './admin/admin.component';
         ShortenPipe,
         NewsfilterPipe,
         AdminComponent,
-      LoginComponent
-
+      LoginComponent,
+      CurrencyCalculatorComponent,
     ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
     BrowserModule,
     AppRoutingModule,
     MatGridListModule,
@@ -74,11 +88,11 @@ import {AdminComponent} from './admin/admin.component';
     MatProgressSpinnerModule,
     MatExpansionModule,
     HttpClientModule,
-    AngularFireAuthModule,
-    AngularFirestoreModule
+    MatOptionModule,
+    MatSelectModule,
 
   ],
-  providers: [PokemonService, QuestionsService],
+  providers: [PokemonService, QuestionsService, AuthenticationService, FirebaseApp],
   bootstrap: [AppComponent, ]
 })
 export class AppModule { }

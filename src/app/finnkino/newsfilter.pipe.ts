@@ -6,8 +6,7 @@ import {propertyNames} from '@angular/material/schematics/ng-update/data';
 })
 export class NewsfilterPipe implements PipeTransform {
   transform(cinemaData$: any, searchTerm: string): any {
-    if (!cinemaData$ || !searchTerm)
-    {
+    if (!cinemaData$ || !searchTerm) {
      return cinemaData$;
     }
     const resultArray = [];

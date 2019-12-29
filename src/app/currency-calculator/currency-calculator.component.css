@@ -1,0 +1,25 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.container-fluid {
+  border-radius: 10px;
+  background: #f8be10;
+  color: #040404;
+  text-align: center;
+  padding: 0.7rem;
+  width: 420px;
+  position: relative;
+  margin: 2% auto auto auto;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(6, 4, 5, 0.98);
+  border-radius: 2px;
+  background: #f8f1f1;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+

@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+  <div class="text-center">
+    <h1>Currency Calculator</h1>
+    <p>Currency converter with responsive design</p>
+  </div>
+
+  <div class="row text-center" *ngIf="rates">
+
+    <div class="col-sm">
+      <p>Amount</p>
+      <input class="input-group" type="number" id="amount" placeholder="add number" (change)="onChangeInputValue($event)">
+    </div>
+
+    <div class="col-sm">
+      <p>Convert From</p>
+      <select class="custom-select" (change)="onConvertFrom($event)" [value]="rates.base">
+        <option *ngFor="let currency of currencyList"> {{currency}}</option>
+      </select>
+    </div>
+
+    <div class="col-sm">
+      <p>Convert To</p>
+      <select class="custom-select" (change)="onConvertTo($event)">
+        <option *ngFor="let currency of currencyList" value="{{currency}}"> {{currency}}</option>
+      </select>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="text-center">
+    <button class="btn btn-dark" (click)="convertRates()">Convert</button>
+  </div>
+
+  <br>
+
+  <hr>
+
+  <div *ngIf="answer">
+
+    <div class="alert alert-warning text-center" role="alert">
+      <h2>{{answerInputValue}} {{answerPrimaryCurrency}} = <span class="text-primary"> {{ answer}} {{answerCurrency}}</span>
+      </h2>
+      Current Rate: <p>1 {{ answerPrimaryCurrency }} = <span class="text-primary">{{answerRate }} {{ answerCurrency}}</span></p>
+    </div>
+    <hr>
+  </div>
+
+</div>
