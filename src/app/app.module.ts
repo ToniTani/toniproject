@@ -16,12 +16,10 @@ import {
 import { FeedbackComponent } from './feedback/feedback.component';
 import { MatSidenavModule} from '@angular/material';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FlexModule} from '@angular/flex-layout';
+import {ExtendedModule, FlexModule} from '@angular/flex-layout';
 import { TemplateFormComponent } from './template-form/template-form.component';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatListModule, MatFormFieldModule, MatCheckboxModule, MatInputModule } from '@angular/material';
-import { ConfirmEqualValidatorDirective } from './reactive-form/confirm-equal-validator.directive';
 import { AlbumsComponent } from './finnkino/albums.component';
 import { PokemonService } from './service/pokemon.service';
 import { PhotosComponent } from './photos/photos.component';
@@ -29,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {ShortenPipe} from './finnkino/shorten.pipe';
 import {NewsfilterPipe} from './finnkino/newsfilter.pipe';
 import {QuestionsService} from './service/questions.service';
+import {MustMatchDirective} from './template-form/validators/must-watch.directive';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {environment} from '../environments/environment';
@@ -45,6 +44,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { CurrencyService} from './service/currency.service';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+
 
 
 // import { AdminComponent } from './admin/admin.component'; [AngularFireModule.initializeApp(environment.firebase) ]
@@ -56,7 +57,6 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
         FeedbackComponent,
         TemplateFormComponent,
         ReactiveFormComponent,
-        ConfirmEqualValidatorDirective,
         AlbumsComponent,
         PhotosComponent,
         ShortenPipe,
@@ -66,8 +66,11 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
       CurrencyCalculatorComponent,
       HeaderComponent,
       SidenavListComponent,
+      ReactiveFormComponent,
+      MustMatchDirective
     ],
   imports: [
+
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
@@ -94,6 +97,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     HttpClientModule,
     MatOptionModule,
     MatSelectModule,
+    ExtendedModule,
 
   ],
   providers: [PokemonService, QuestionsService, AuthenticationService, FirebaseApp],

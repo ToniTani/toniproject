@@ -11,7 +11,7 @@ export const environment = {
     projectId: 'paska-e31dc',
     storageBucket: 'paska-e31dc.appspot.com',
     messagingSenderId: '618305702418',
-     appId: '1:618305702418:web:1204747961aed76a00e6cb'
+   //  appId: '1:618305702418:web:1204747961aed76a00e6cb'
   }
 };
 
