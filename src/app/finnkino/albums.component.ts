@@ -12,8 +12,8 @@ import {Album} from './album';
 
 export class AlbumsComponent implements OnInit {
 
-  private cinemaData$: Observable<any>;
-  searchTerm = '';
+  public cinemaData$: Observable<Album[]>;
+  searchTerm: string;
 
   constructor(private service: PokemonService, ) {}
 

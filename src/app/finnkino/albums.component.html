@@ -1,5 +1,5 @@
+<input type="text" align="center" id="searchbox" [(ngModel)]="searchTerm" placeholder="Etsi uutista">
 
-    <input type="text" [(ngModel)]="searchTerm" placeholder="Etsi uutisista!" />
 <mat-accordion>
   <mat-expansion-panel *ngFor="let item of cinemaData$ | async | newsFilter: searchTerm ">
       <mat-expansion-panel-header>

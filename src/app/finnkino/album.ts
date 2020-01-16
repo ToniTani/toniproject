@@ -1,13 +1,13 @@
 export class Album {
   ID: number;
   Views: number;
-  User: string;
+  Title: string;
   UserImageURL: string;
 
-  constructor(id: number, userImageURL: string, views: number, user: string, ) {
+  constructor(id: number, userImageURL: string, views: number, title: string, ) {
     this.ID = id;
     this.Views = views;
-    this.User = user;
+    this.Title = title;
     this.UserImageURL = userImageURL;
   }
 }

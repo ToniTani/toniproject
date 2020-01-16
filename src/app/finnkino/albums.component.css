@@ -7,15 +7,14 @@
   margin: 1% auto auto auto;
   box-shadow: #3c61bf; inset: 2px 1px 10px -5px
 }
-.example-form {
-  min-width: 100px;
-  
-  max-width: 500px;
-  width: 100%;
+#searchbox {
+  width: 50%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid rgba(142, 20, 204, 0.98);
+  position: center;
   margin: 1% auto auto auto;
-}
-
-.example-full-width {
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
