@@ -24,7 +24,7 @@
         <input type="text" name="email" class="form-control" [(ngModel)]="model.email" #email="ngModel" required pattern='^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' [ngClass]="{ 'is-invalid': f.submitted && email.invalid }">
         <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
           <div *ngIf="email.errors.required">Email is required</div>
-          <div *ngIf="email.errors.email">Email must be a valid email address</div>
+          <div *ngIf="email.errors.pattern">Email must be a valid email address</div>
         </div>
       </div>
 
@@ -33,7 +33,7 @@
         <input type="socialid" class="form-control" name="socialid" required pattern="^(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])([5-9]\d\+|\d\d-|[01]\dA)\d{3}[\dABCDEFHJKLMNPRSTUVWXY]$" [(ngModel)]="model.socialid" #socialid="ngModel" [ngClass]="{ 'is-invalid': f.submitted && socialid.invalid }" >
         <div *ngIf="f.submitted && socialid.invalid" class="invalid-feedback">
           <div *ngIf="socialid.errors.required">Social security number is required</div>
-          <div *ngIf="socialid.errors.required">Social security number must be in valid form</div>
+          <div *ngIf="socialid.errors.pattern">Social security number must be in valid form</div>
         </div>
       </div>
 
