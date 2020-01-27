@@ -32,12 +32,12 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
-import {LoginComponent} from './login/login.component';
+// import {LoginComponent} from './login/login.component';
 import {AdminComponent} from './admin/admin.component';
 import {firestore} from '@firebase/firestore/dist/test/util/api_helpers';
 import {FirebaseApp, FirebaseAuth, FirebaseDatabase} from '@angular/fire';
 import {AuthData} from './login/auth-data';
-import {AuthenticationService} from './service/authentication.service';
+// import {AuthenticationService} from './service/authentication.service';
 import { CurrencyCalculatorComponent } from './currency-calculator/currency-calculator.component';
 import {FirebaseAppConfig} from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
@@ -45,7 +45,8 @@ import { CurrencyService} from './service/currency.service';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-
+import { AuthComponent } from './auth/auth.component';
+import { AuthService} from './auth/auth.service';
 
 
 // import { AdminComponent } from './admin/admin.component'; [AngularFireModule.initializeApp(environment.firebase) ]
@@ -62,12 +63,13 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
         ShortenPipe,
         NewsfilterPipe,
         AdminComponent,
-      LoginComponent,
+     // LoginComponent,
       CurrencyCalculatorComponent,
       HeaderComponent,
       SidenavListComponent,
       ReactiveFormComponent,
-      MustMatchDirective
+      MustMatchDirective,
+      AuthComponent
     ],
   imports: [
 
@@ -100,7 +102,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     ExtendedModule,
 
   ],
-  providers: [PokemonService, QuestionsService, AuthenticationService, FirebaseApp],
+  providers: [PokemonService, QuestionsService, FirebaseApp, AuthService],
   bootstrap: [AppComponent, ]
 })
 export class AppModule { }
