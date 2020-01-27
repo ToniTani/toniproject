@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Photo} from '../photos/photo';
+import {FeedBackItem} from '../feedback/questions';
 
 
 @Injectable({
@@ -8,30 +8,21 @@ import {Photo} from '../photos/photo';
 export class QuestionsService {
 
 
-photos: Photo[];
+  feedbackItemsList: Array<FeedBackItem>;
 
 constructor() {
-  this.photos = [
-    {
-      kissa: 'John',
-      koira: 'Doe',
-      apina: 'Bo',
-    },
-    {
-      kissa: 'Kevin',
-      koira: 'John',
-      apina: 'Youk',
+    this.feedbackItemsList = [new FeedBackItem('Mitä kuuluu?'),
+      new FeedBackItem('Miten menee?'),
+      new FeedBackItem('Kuka olet?')];
+    this.feedbackItemsList.push(new FeedBackItem('Hur mår du?'),
+      new FeedBackItem('Hur är läget?'),
+      new FeedBackItem('Vem är du?'));
 
-    }
-  ];
+  }
+
+
+getFeedback(): FeedBackItem[] {
+  return this.feedbackItemsList;
 }
-
-getPhotos(): Photo[] {
-  console.log('Photo added');
-  return this.photos;
 }
 
-addPhoto(photo: Photo) {
-  this.photos.unshift(photo);
-}
-}
