@@ -27,7 +27,6 @@
     "@angular/router": "^8.2.14",
     "@firebase/auth": "^0.13.3",
     "@firebase/auth-types": "^0.9.3",
-    "@firebase/firestore": "^1.9.1",
     "bootstrap": "^4.4.1",
     "firebase": "^7.7.0",
     "google-auth-library": "^5.7.0",
@@ -45,8 +44,8 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.803.22",
-    "@angular/cli": "^8.3.20",
+    "@angular-devkit/build-angular": "^0.803.23",
+    "@angular/cli": "^8.3.23",
     "@angular/compiler-cli": "^8.2.14",
     "@angular/language-service": "^8.2.14",
     "@types/jasmine": "~3.3.8",
@@ -63,6 +62,6 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.4.5"
+    "typescript": "^3.4.5"
   }
 }
