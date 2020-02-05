@@ -22,7 +22,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatListModule, MatFormFieldModule, MatCheckboxModule, MatInputModule } from '@angular/material';
 import { AlbumsComponent } from './finnkino/albums.component';
 import { PokemonService } from './service/pokemon.service';
-import { PhotosComponent } from './photos/photos.component';
 import { HttpClientModule } from '@angular/common/http';
 import {ShortenPipe} from './finnkino/shorten.pipe';
 import {NewsfilterPipe} from './finnkino/newsfilter.pipe';
@@ -34,7 +33,6 @@ import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 // import {LoginComponent} from './login/login.component';
 import {AdminComponent} from './admin/admin.component';
-import {firestore} from '@firebase/firestore/dist/test/util/api_helpers';
 import {FirebaseApp, FirebaseAuth, FirebaseDatabase} from '@angular/fire';
 import {AuthData} from './login/auth-data';
 // import {AuthenticationService} from './service/authentication.service';
@@ -59,7 +57,6 @@ import { AuthService} from './auth/auth.service';
         TemplateFormComponent,
         ReactiveFormComponent,
         AlbumsComponent,
-        PhotosComponent,
         ShortenPipe,
         NewsfilterPipe,
         AdminComponent,
@@ -73,9 +70,9 @@ import { AuthService} from './auth/auth.service';
     ],
   imports: [
 
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    AngularFirestoreModule,
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFireAuthModule,
+    // AngularFirestoreModule,
     AngularFireStorageModule,
     BrowserModule,
     AppRoutingModule,
@@ -102,7 +99,7 @@ import { AuthService} from './auth/auth.service';
     ExtendedModule,
 
   ],
-  providers: [PokemonService, QuestionsService, FirebaseApp, AuthService],
+  providers: [PokemonService, QuestionsService, AuthService],
   bootstrap: [AppComponent, ]
 })
 export class AppModule { }

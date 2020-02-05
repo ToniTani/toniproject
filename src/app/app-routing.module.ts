@@ -5,7 +5,6 @@ import {MatSliderModule} from '@angular/material/slider';
 import {FeedbackComponent} from './feedback/feedback.component';
 import {TemplateFormComponent} from './template-form/template-form.component';
 import {AlbumsComponent} from './finnkino/albums.component';
-import {PhotosComponent} from './photos/photos.component';
 // import {LoginComponent} from './login/login.component';
 import {AdminComponent} from './admin/admin.component';
 import {CurrencyCalculatorComponent} from './currency-calculator/currency-calculator.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
   {path: 'template-form', component: TemplateFormComponent},
   {path: 'reactive-form', component: ReactiveFormComponent},
   {path: 'albums', component: AlbumsComponent},
-  {path: 'photos', component: PhotosComponent},
  // {path: 'login', component: LoginComponent},
   {path: 'currency', component: CurrencyCalculatorComponent},
   {path: 'auth', component: AuthComponent},
