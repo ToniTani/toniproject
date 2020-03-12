@@ -9,4 +9,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Mobile device
 
 ![taniappresponsive](https://user-images.githubusercontent.com/43187463/76513666-4de8e200-645f-11ea-82af-46fa276fe9f2.gif)
-
+![taniappresponsive2](https://user-images.githubusercontent.com/43187463/76516065-7672db00-6463-11ea-91b6-dd16df2e4a24.gif)
