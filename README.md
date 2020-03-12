@@ -1,27 +1,12 @@
-# Toniproject
+# Toniproject preview
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.15.
 
-## Development server
+## Standard webview 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![taniapp](https://user-images.githubusercontent.com/43187463/76513625-4295b680-645f-11ea-8ed7-c838178c48c1.gif)
 
-## Code scaffolding
+## Mobile device
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![taniappresponsive](https://user-images.githubusercontent.com/43187463/76513666-4de8e200-645f-11ea-82af-46fa276fe9f2.gif)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
