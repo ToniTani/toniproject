@@ -7,15 +7,8 @@
   margin: 1% auto auto auto;
   box-shadow: #3c61bf; inset: 2px 1px 10px -5px
 }
-#searchbox {
-  width: 50%;
-  font-size: 18px;
-  padding: 11px;
-  border: 1px solid rgba(142, 20, 204, 0.98);
-  position: center;
-  margin: 1% auto auto auto;
-  display: flex;
-  justify-content: center;
-  border-radius: 5px;
+.mat-form-field {
+  position: relative;
+  margin: 5% auto auto auto;
+  width: 400px;
 }
-

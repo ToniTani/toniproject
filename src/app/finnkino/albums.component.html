@@ -1,6 +1,11 @@
-<input type="text" align="center" id="searchbox" [(ngModel)]="searchTerm" placeholder="Etsi uutista">
 
-<mat-accordion>
+<mat-card>
+  <mat-form-field>
+  <input type="text" id="searchbox" [(ngModel)]="searchTerm" matInput placeholder="Etsi uutista">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <mat-card-title>Finnkino Uutiset</mat-card-title>
+  <mat-accordion>
   <mat-expansion-panel *ngFor="let item of cinemaData$ | async | newsFilter: searchTerm ">
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -16,3 +21,4 @@
     <img style="align-content: end" src="{{item.ImageURL}}">
   </mat-expansion-panel>
 </mat-accordion>
+</mat-card>
