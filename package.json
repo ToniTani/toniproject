@@ -37,6 +37,8 @@
     "rxjs-compat": "^6.6.6",
     "save": "^2.4.0",
     "sax": "^1.2.4",
+    "stream": "0.0.2",
+    "timers": "^0.1.1",
     "tslib": "^1.14.1",
     "util.promisify": "^1.1.1",
     "xml2js": "^0.4.23",
