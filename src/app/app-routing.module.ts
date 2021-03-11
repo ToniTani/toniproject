@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {CalculatorComponent} from './calculator/calculator.component';
 import {MatSliderModule} from '@angular/material/slider';
@@ -31,6 +31,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [ ]
+  providers: [ ],
+  schemas:   [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppRoutingModule { }

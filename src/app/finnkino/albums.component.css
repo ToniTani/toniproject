@@ -8,7 +8,6 @@
   box-shadow: #3c61bf; inset: 2px 1px 10px -5px
 }
 .mat-form-field {
-  position: relative;
-  margin: 5% auto auto auto;
-  width: 400px;
+
+  width: 300px;
 }

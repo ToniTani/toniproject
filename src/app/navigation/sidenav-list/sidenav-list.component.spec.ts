@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 
 import { SidenavListComponent } from './sidenav-list.component';
 
@@ -11,7 +11,7 @@ describe('SideNavListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ SidenavListComponent ],
       schemas: [
-        CUSTOM_ELEMENTS_SCHEMA
+        CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA
       ],
     })
       .compileComponents();

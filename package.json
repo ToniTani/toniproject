@@ -27,6 +27,7 @@
     "@angular/router": "^8.2.14",
     "@firebase/auth": "^0.13.6",
     "@firebase/auth-types": "^0.9.6",
+    "angular": "^1.8.2",
     "bootstrap": "^4.6.0",
     "firebase": "^7.24.0",
     "google-auth-library": "^5.10.1",
