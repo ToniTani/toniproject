@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -101,6 +101,7 @@ import { AuthService} from './auth/auth.service';
 
   ],
   providers: [PokemonService, QuestionsService, AuthService],
-  bootstrap: [AppComponent, ]
+  bootstrap: [AppComponent, ],
+  schemas:   [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
