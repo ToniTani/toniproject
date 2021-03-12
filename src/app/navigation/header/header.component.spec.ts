@@ -11,7 +11,7 @@ describe('HeaderComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ HeaderComponent ],
       schemas: [
-        CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA
+        CUSTOM_ELEMENTS_SCHEMA
       ],
     })
       .compileComponents();
