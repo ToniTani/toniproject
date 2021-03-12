@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CalculatorComponent } from './calculator.component';
+import {MatButton, MatGridList, MatGridTile} from '@angular/material';
 
 describe('CalculatorComponent', () => {
   let component: CalculatorComponent;
@@ -8,7 +9,13 @@ describe('CalculatorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CalculatorComponent ]
+      declarations: [ CalculatorComponent ],
+      imports: [
+        MatButton,
+        MatGridList,
+        MatGridTile,
+      ],
+
     })
     .compileComponents();
   }));
