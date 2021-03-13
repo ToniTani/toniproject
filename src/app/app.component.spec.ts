@@ -4,35 +4,41 @@ import { AppComponent } from './app.component';
 import {HeaderComponent} from './navigation/header/header.component';
 import {SidenavListComponent} from './navigation/sidenav-list/sidenav-list.component';
 import {AlbumsComponent} from './finnkino/albums.component';
+import {CalculatorComponent} from './calculator/calculator.component';
+import {MatSidenav, MatSidenavModule} from '@angular/material';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(async (() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        MatSidenavModule,
+        BrowserAnimationsModule,
+        HttpClientTestingModule
       ],
       declarations: [
-        AppComponent, HeaderComponent, SidenavListComponent, AlbumsComponent
+        AppComponent, HeaderComponent, SidenavListComponent, CalculatorComponent
+      ],
+      schemas: [
+         CUSTOM_ELEMENTS_SCHEMA
       ],
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
+  it('should create the app with working components', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'toniproject'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('toniproject');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('toniproject app is running!');
-  });
+  // it('should render title', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.debugElement.nativeElement;
+  //   expect(compiled.querySelector('.content span').textContent).toContain('toniproject app is running!');
+  // });
 });

@@ -28,19 +28,9 @@ import {ShortenPipe} from './finnkino/shorten.pipe';
 import {NewsfilterPipe} from './finnkino/newsfilter.pipe';
 import {QuestionsService} from './service/questions.service';
 import {MustMatchDirective} from './template-form/validators/must-watch.directive';
-import {AngularFireAuthModule} from '@angular/fire/auth';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {environment} from '../environments/environment';
-import {AngularFireModule} from '@angular/fire';
-// import {LoginComponent} from './login/login.component';
 import {AdminComponent} from './admin/admin.component';
-import {FirebaseApp, FirebaseAuth, FirebaseDatabase} from '@angular/fire';
-import {AuthData} from './login/auth-data';
-// import {AuthenticationService} from './service/authentication.service';
 import { CurrencyCalculatorComponent } from './currency-calculator/currency-calculator.component';
-import {FirebaseAppConfig} from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { CurrencyService} from './service/currency.service';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
@@ -61,7 +51,6 @@ import { AuthService} from './auth/auth.service';
         ShortenPipe,
         NewsfilterPipe,
         AdminComponent,
-     // LoginComponent,
       CurrencyCalculatorComponent,
       HeaderComponent,
       SidenavListComponent,
@@ -71,9 +60,6 @@ import { AuthService} from './auth/auth.service';
     ],
   imports: [
 
-    // AngularFireModule.initializeApp(environment.firebase),
-    // AngularFireAuthModule,
-    // AngularFirestoreModule,
     AngularFireStorageModule,
     BrowserModule,
     AppRoutingModule,

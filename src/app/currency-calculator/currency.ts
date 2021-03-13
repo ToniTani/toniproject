@@ -1,5 +1,5 @@
 export interface Currency { // names from api
   base: string;
-  date: Date;
+  date: string;
   rates: object;
 }
