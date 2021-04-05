@@ -2,6 +2,8 @@
 
 You can test this app here https://tonitani.herokuapp.com/
 
+UPDATE! Currency converter  doesn't work anymore without an API key.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.15.
 
 ## Standard webview 
